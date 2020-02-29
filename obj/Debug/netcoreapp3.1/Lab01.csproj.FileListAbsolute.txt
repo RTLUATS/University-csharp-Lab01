@@ -1,0 +1,16 @@
+C:\Users\jtmotn\source\repos\Lab01\bin\Debug\netcoreapp3.1\Lab01.exe
+C:\Users\jtmotn\source\repos\Lab01\obj\Debug\netcoreapp3.1\Lab01.csprojAssemblyReference.cache
+C:\Users\jtmotn\source\repos\Lab01\obj\Debug\netcoreapp3.1\Interop.VBIDE.dll
+C:\Users\jtmotn\source\repos\Lab01\obj\Debug\netcoreapp3.1\Lab01.csproj.ResolveComReference.cache
+C:\Users\jtmotn\source\repos\Lab01\obj\Debug\netcoreapp3.1\Lab01.AssemblyInfoInputs.cache
+C:\Users\jtmotn\source\repos\Lab01\obj\Debug\netcoreapp3.1\Lab01.AssemblyInfo.cs
+C:\Users\jtmotn\source\repos\Lab01\bin\Debug\netcoreapp3.1\Lab01.deps.json
+C:\Users\jtmotn\source\repos\Lab01\bin\Debug\netcoreapp3.1\Lab01.runtimeconfig.json
+C:\Users\jtmotn\source\repos\Lab01\bin\Debug\netcoreapp3.1\Lab01.runtimeconfig.dev.json
+C:\Users\jtmotn\source\repos\Lab01\bin\Debug\netcoreapp3.1\Lab01.dll
+C:\Users\jtmotn\source\repos\Lab01\bin\Debug\netcoreapp3.1\Lab01.pdb
+C:\Users\jtmotn\source\repos\Lab01\bin\Debug\netcoreapp3.1\CsvHelper.dll
+C:\Users\jtmotn\source\repos\Lab01\bin\Debug\netcoreapp3.1\Interop.VBIDE.dll
+C:\Users\jtmotn\source\repos\Lab01\obj\Debug\netcoreapp3.1\Lab01.csproj.CopyComplete
+C:\Users\jtmotn\source\repos\Lab01\obj\Debug\netcoreapp3.1\Lab01.dll
+C:\Users\jtmotn\source\repos\Lab01\obj\Debug\netcoreapp3.1\Lab01.pdb
