@@ -2,43 +2,40 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Text;
+using CsvHelper.Configuration.Attributes;
 
 namespace Lab01
 {
 
     internal class CardHolder
     {
+        [Name("Id")]
+        public  int id { get; set; }
+        
+        [Name("Name")]
+        public string holder { get; set; }
 
-        internal  int id { get; set; }
-
-        internal string holder { get; set; }
-
-        internal  int _money { get; set; }
+        internal int _money { get; set; }
 
 
         CardHolder()
         {
-            id = -1;
-            holder = null;
-            _money = 0;
-        }
-
-        CardHolder(int id,string holder)
-        {
-            this.id = id;
-            this.holder = holder;
+           
         }
 
         internal void Update(int value)
         {
-            _money += value;
+            _money = value;
         }
 
-        internal void Event(int value)
+
+        internal void Event(string message)
         {
-            Console.WriteLine(value == 0 ? "insufficient funds" : $"Withdraw {value}$");
+            Console.WriteLine("____________________________\n\n"+
+                             $"{holder}\t{message}" +
+                              "\n__________________________\n");
         } 
 
-        public override string ToString() => string.Format($"{holder}\t{_money}");
+        public override string ToString() => string.Format($"{holder}\t\t{_money}");
     }
 }

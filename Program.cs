@@ -27,15 +27,21 @@ namespace Lab01
                 }
             }
 
+            for (int i = 0; i < cards.Length; i++)
+            {
+                cards[i].Notify(cards[i]._money);
+            }
+
             foreach (var obj in holders)
             {
+                
                 Console.WriteLine(obj);
             }
 
             Console.WriteLine("____________________________________________");
 
-            cards[0]._money = -100;
-            cards[1]._money = -1000;
+            cards[0].SetMoney(-100);
+            cards[1].SetMoney(-1000);
 
             foreach (var obj in holders )
             {

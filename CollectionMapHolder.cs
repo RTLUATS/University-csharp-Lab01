@@ -9,7 +9,7 @@ namespace Lab01
     {
         public CollectionMapHolder()
         {
-            Map(m => m.id).Name("ID");
+            Map(m => m.id).Name("Id");
             Map(m => m.holder).Name("Name");
         }
     }

@@ -15,7 +15,7 @@ namespace Lab01
                 using (var reader = new StreamReader(@"..\..\..\Holders.csv"))
                 using (var csv = new CsvReader(reader, System.Globalization.CultureInfo.CurrentCulture))
                 {
-                    csv.Configuration.RegisterClassMap<CollectionMapHolder>();
+                   csv.Configuration.RegisterClassMap<CollectionMapHolder>();
                     var records = csv.GetRecords<CardHolder>();
                     return records.ToArray();
                 }
@@ -38,21 +38,15 @@ namespace Lab01
 
         public static Card[] GetCards()
         {
-            try
+
+            using (var reader = new StreamReader(@"..\..\..\Cards.csv"))
+            using (var csv = new CsvReader(reader, System.Globalization.CultureInfo.CurrentCulture))
             {
-                using (var reader = new StreamReader(@"..\..\..\Cards.csv"))
-                using (var csv = new CsvReader(reader, System.Globalization.CultureInfo.CurrentCulture))
-                {
-                    csv.Configuration.RegisterClassMap<CollectionMapCards>();
-                    var records = csv.GetRecords<Card>();
-                    return records.ToArray();
-                }
+                csv.Configuration.RegisterClassMap<CollectionMapCards>();
+                var records = csv.GetRecords<Card>();
+                return records.ToArray();
             }
-            catch (Exception massage)
-            {
-                Console.WriteLine(massage);
-                return null;
-            }
+
         }
 
         public static void SetCards(IEnumerable<Card> storages)

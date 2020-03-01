@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq.Expressions;
-using System.Text;
-using CsvHelper.Configuration;
+﻿using CsvHelper.Configuration;
 
 namespace Lab01
 {
@@ -10,7 +6,7 @@ namespace Lab01
     {
         public CollectionMapCards()
         {
-            Map(m =>m.id).Name("ID");
+            Map(m =>m.id).Name("Id");
             Map(m => m._money).Name("Money");
         }
     }

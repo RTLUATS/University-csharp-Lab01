@@ -1,53 +1,44 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using CsvHelper.Configuration.Attributes;
 
 namespace Lab01
 {
     public delegate void Handler(int _money);
 
-    public delegate void HandlerEvent(int value);
+    public delegate void HandlerEvent(string message );
 
     class Card // наблюдаемый обьект
     {
         private Handler handler;
         
         private event HandlerEvent handlerEvent;
-
-        internal int id { set; get; }
         
-        internal int _money {
-            set
-            {
-                if (_money - value < 0)
-                {
-                    EventNotify(0);   
-                }
-                else if(value < 0)
-                {
-                    EventNotify(value);
-                    _money += value;
-                    Notify(_money);
-                }
-                else
-                {
-                    _money = value;
-                    Notify(_money);
-                }
-            }
-            get => _money;
-        }
+        [Name("Id")]
+        public int id { set; get; }
+        
+        [Name("Money")]
+        public int _money { set;get;}
+
+
 
         Card()
         {
-            id = -1;
-            _money = 0;
+            
         }
 
-        Card(int id, int amountOfFunds)
+
+        public void SetMoney(int value)
         {
-            this.id = id;
-            _money = amountOfFunds;
+
+            if (_money + value >= 0)
+            {
+                EventNotify(value*(-1));
+                _money += value;
+                Notify(_money);
+            }
+
         }
 
         internal void AddObserver(Handler nameHandler)
@@ -57,7 +48,7 @@ namespace Lab01
 
         internal void AddEvent(HandlerEvent handler)
         {
-            handlerEvent -= handler;
+            handlerEvent += handler;
         }
 
         internal void RemoveObserver(Handler nameHandler)
@@ -70,14 +61,16 @@ namespace Lab01
             handlerEvent -= handler;
         }
 
-        internal void Notify(int _money)
+        internal void Notify(int value)
         {
-            handler?.Invoke(_money);
+            handler?.Invoke(value);
         }
 
         internal void EventNotify(int value)
         {
-            handlerEvent?.Invoke(value);
+            
+            handlerEvent?.Invoke($"Withdraw { value}");
+
         }
 
     }
